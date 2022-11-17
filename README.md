@@ -1,0 +1,3 @@
+# cloneClickColors
+
+clique na tela
