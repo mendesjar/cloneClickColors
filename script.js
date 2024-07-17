@@ -21,6 +21,13 @@ window.onload = function () {
         grid: [rows, columns],
         from: index,
       }),
+      update: (anime) => {
+        const tiles = wrapper.querySelectorAll(".tile");
+        const canInteract = anime.progress >= 50;
+        tiles.forEach(
+          (tile) => (tile.style.pointerEvents = canInteract ? "auto" : "none")
+        );
+      },
     });
   };
 
