@@ -21,9 +21,9 @@ window.onload = function () {
         grid: [rows, columns],
         from: index,
       }),
-      update: (anime) => {
+      update: ({ progress }) => {
         const tiles = wrapper.querySelectorAll(".tile");
-        const canInteract = anime.progress >= 50;
+        const canInteract = progress >= 50;
         tiles.forEach(
           (tile) => (tile.style.pointerEvents = canInteract ? "auto" : "none")
         );
